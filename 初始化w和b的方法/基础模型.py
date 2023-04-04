@@ -2,7 +2,7 @@
 import tensorflow as tf
 import tensorflow.keras as keras
 import tensorflow.keras.layers as layers
-#sequential方式
+#sequential方式 Sequential英文译为“顺序的”
 # 定义model,构建模型
 model = keras.Sequential([
     # 第一个隐层
