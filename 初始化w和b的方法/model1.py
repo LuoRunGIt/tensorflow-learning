@@ -25,7 +25,8 @@ class MyModel(keras.Model):
         return outputs
 
 model = MyModel()
-# 设置输入
-x = tf.ones((1,3))
+# 设置输入,这个表示输入层
+x = tf.ones((1,4))
+print(x)
 y = model(x)
 model.summary()
