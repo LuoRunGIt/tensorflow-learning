@@ -11,7 +11,7 @@ history = model.fit(np.arange(100).reshape(5,20),np.array([0,1,0,1,0]),epochs=10
 len(history.history['loss'])
 
 #BN 批标准化
-# 直接将其放⼊构建神经⽹络的结构中即可
+# 直接将其放⼊构建神经⽹络的结构中即可，
 tf.keras.layers.BatchNormalization(
  epsilon=0.001, center=True, scale=True,
  beta_initializer='zeros', gamma_initializer='ones', )
