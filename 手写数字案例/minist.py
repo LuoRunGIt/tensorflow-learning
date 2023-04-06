@@ -114,7 +114,8 @@ print(X_test.shape)
 x_test1 = tf.convert_to_tensor([x_test[1]])
 print(x_test1.shape)
 p = model.predict(x_test1)
-
+# 判断输出值
 print(p, type(p), p.shape)
+# 最大值下标
 b = np.argmax(p)
 print("预测值", b)
