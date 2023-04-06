@@ -6,7 +6,8 @@ import tensorflow.keras.layers as layers
 # 定义model,构建模型
 model = keras.Sequential([
     # 第一个隐层
-    layers.Dense(3, activation="relu", kernel_initializer="he_normal", name="layer1",input_shape=(3,)),
+    layers.Dense(3, activation="relu", kernel_initializer="he_normal",
+                 name="layer1",input_shape=(3,)),
     # 第二个隐层
     layers.Dense(2, activation="relu",
                  kernel_initializer="he_normal", name="layer2"),
