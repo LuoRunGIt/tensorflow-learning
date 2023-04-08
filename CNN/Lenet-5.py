@@ -53,7 +53,8 @@ net.compile(optimizer=optimizer, loss=keras.losses.sparse_categorical_crossentro
 #模型训练
 #validation_split: 0~1之间的浮点数，用来指定训练集的一定比例数据作为验证集。
 net.fit(train_images,y_train,epochs=5,validation_split=0.1)
-
+print("输入",train_images.shape,type(train_images))
+print("测试",type(y_train))
 #模型评估
 score = net.evaluate(test_images, y_test, verbose=1)
 print('Test accuracy:', score[1])
