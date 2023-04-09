@@ -108,8 +108,8 @@ output = tf.keras.layers.Dense(10, activation="softmax")(x)
 
 # googLeNet 有3个输出
 model = tf.keras.Model(inputs=inputs, outputs=[output, aux_output1, aux_output2])
-#model.build(input_shape=(1, 224, 224, 1))
-#model.summary()
+# model.build(input_shape=(1, 224, 224, 1))
+# model.summary()
 
 # 获取手写数字数据集
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
@@ -150,7 +150,7 @@ optimizer = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.0)
 model.compile(optimizer=optimizer,
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'], loss_weights=[1, 0.3, 0.3])
-model.fit(train_images,train_labels,batch_size=32,epochs=8,verbose=1,validation_split=0.1)
+model.fit(train_images, train_labels, batch_size=32, epochs=8, verbose=1, validation_split=0.1)
 # 指定测试数据
-score = model.evaluate(test_images, test_labels,verbose=1)
+score = model.evaluate(test_images, test_labels, verbose=1)
 print(score)
