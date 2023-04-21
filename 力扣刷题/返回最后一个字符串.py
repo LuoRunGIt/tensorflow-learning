@@ -9,5 +9,5 @@ class Solution:
             end=end-1
             i=i+1
         return i
-
+# strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）
         #return len(s.strip().split()[-1])
